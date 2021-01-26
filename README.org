@@ -1,0 +1,4 @@
+#+TITLE:   .doom.d
+#+STARTUP: inlineimages nofold
+
+Copy of my current Doom Emacs configuration files.
