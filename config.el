@@ -48,10 +48,12 @@
 
 ;(setq tramp-use-ssh-controlmaster-options nil)
 
-(setq python-indent-offset 2)
+(setq python-indent-offset 4)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
 (setq c-basic-offset 2)
+;; Fix OpenMP #pragma warnings
+(setq flycheck-gcc-openmp t)
 
 (elpy-enable)
 (setq python-shell-interpreter "ipython"

@@ -18,6 +18,8 @@
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 (package! csv-mode)
 (package! elpy)
+(package! py-autopep8)
+(package! nhexl-mode)
 
 ;; To install a package directly from a particular repo, you'll need to specify
 ;; a `:recipe'. You'll find documentation on what `:recipe' accepts here:

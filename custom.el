@@ -3,7 +3,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (ein csv-mode)))
+ '(package-selected-packages (quote (nhexl-mode py-autopep8 ein csv-mode)))
  '(safe-local-variable-values
    (quote
     ((cider-figwheel-main-default-options . ":dev")
