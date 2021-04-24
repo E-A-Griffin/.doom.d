@@ -59,6 +59,37 @@
 (setq python-shell-interpreter "ipython"
       python-shell-interpreter-args "-i --simple-prompt")
 
+;; thanks Elijah!!
+(defun vpn-netcluster ()
+  "USF can leave me the hell alone"
+  (interactive)
+  (let* ((default-directory "/sudo::/")
+         (process (start-file-process
+                   "vpn.sh"
+                   "*vpn.sh*"
+                   (expand-file-name "/home/emma/vpn.sh")))
+         (password (read-passwd "USF Password: ")))
+    (with-current-buffer (process-buffer process)
+      (doom-mark-buffer-as-real-h)
+      (comint-mode))
+    (process-send-string process password)
+    (process-send-string process "\n")
+    (process-send-eof process)))
+
+(defun ssh-netcluster ()
+  "ahaha ssh a lot to type out"
+  (interactive)
+  (find-file "/ssh:netcluster:/home/e/eagriffin/"))
+
+;; Bind the keys!
+(map! :leader
+      "v p n"
+      #'vpn-netcluster)
+
+(map! :leader
+      "s h"
+      #'ssh-netcluster)
+
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
