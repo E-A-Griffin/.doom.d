@@ -90,6 +90,9 @@
       "s h"
       #'ssh-netcluster)
 
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'org-mode-hook 'rainbow-delimiters-mode)
+
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
