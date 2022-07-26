@@ -21,6 +21,32 @@
 (package! py-autopep8)
 (package! nhexl-mode)
 (package! irony)
+(package! typescript-mode)
+(package! ejc-sql)
+(package! magit-section)
+(package! exec-path-from-shell)
+(package! bison-mode)
+(package! web-mode)
+(package! string-inflection)
+(package! verb)
+(package! clojars)
+;(package! inf-clojure :disable t)
+(package! csproj-mode)
+(package! assess)
+
+;; Fixes weird issue that occurred with `./doom sync`
+(package! gitconfig-mode
+	  :recipe (:host github :repo "magit/git-modes"
+			 :files ("gitconfig-mode.el")))
+(package! gitignore-mode
+	  :recipe (:host github :repo "magit/git-modes"
+                   :files ("gitignore-mode.el")))
+
+(package! inf-clojure
+         :recipe (:host github :repo "E-A-Griffin/inf-clojure"
+                  :branch "master"))
+
+(unpin! inf-clojure)
 
 ;; To install a package directly from a particular repo, you'll need to specify
 ;; a `:recipe'. You'll find documentation on what `:recipe' accepts here:
