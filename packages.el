@@ -34,13 +34,10 @@
 (package! csproj-mode)
 (package! assess)
 
-;; Fixes weird issue that occurred with `./doom sync`
-(package! gitconfig-mode
-	  :recipe (:host github :repo "magit/git-modes"
-			 :files ("gitconfig-mode.el")))
-(package! gitignore-mode
-	  :recipe (:host github :repo "magit/git-modes"
-                   :files ("gitignore-mode.el")))
+(package! rainbow-delimiters)
+
+;; Keep lines 80 or less (or 120 or less)
+(package! column-marker)
 
 (package! inf-clojure
          :recipe (:host github :repo "E-A-Griffin/inf-clojure"
